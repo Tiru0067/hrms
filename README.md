@@ -108,14 +108,6 @@ DB_NAME=hrms_db
 JWT_SECRET=your_secret
 ```
 
-Frontend (`.env`):
-
-```
-REACT_APP_API_BASE=https://your-backend-domain/api
-```
-
----
-
 ## 🚀 Deployment Notes
 
 ### **Frontend**

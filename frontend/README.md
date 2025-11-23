@@ -58,18 +58,6 @@ npm install
 npm start
 ```
 
----
-
-## 🌐 **Environment Variables**
-
-Create `.env` in `/frontend`:
-
-```
-REACT_APP_API_BASE=https://your-backend-domain/api
-```
-
----
-
 ## 🔧 **Deployment (Vercel)**
 
 1. Push code to GitHub
