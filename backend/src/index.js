@@ -30,13 +30,15 @@ async function startServer() {
 }
 
 // CORS configuration
-// app.use(cors({
-//   origin: "http://localhost:5173",
-//   credentials: true,
-// }));
+app.use(
+  cors({
+    origin: "https://hrms-one-zeta.vercel.app/",
+    credentials: true,
+  })
+);
 
 // For development purposes, allow all origins
-app.use(cors());
+// app.use(cors());
 
 // Middleware to parse JSON requests
 app.use(express.json());
