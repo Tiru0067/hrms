@@ -32,7 +32,7 @@ async function startServer() {
 // CORS configuration
 app.use(
   cors({
-    origin: "https://hrms-one-zeta.vercel.app/",
+    origin: "https://hrms-one-zeta.vercel.app",
     credentials: true,
   })
 );

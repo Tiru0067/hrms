@@ -1,16 +1,99 @@
-# React + Vite
+# **HRMS Frontend**
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the React frontend for the HRMS (Human Resource Management System). It connects to the Node.js backend API and provides UI screens for authentication, employees, teams, and assignments.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ **Features**
 
-## React Compiler
+- Organisation registration
+- User login
+- Dashboard
+- Employee management (CRUD)
+- Team management (CRUD)
+- Assign employees to teams
+- React Router-based navigation
+- Axios API integration
+- Fully deployed on Vercel
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ **Tech Stack**
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React (Create React App)
+- React Router
+- Axios
+- Vercel (hosting)
+
+---
+
+## 📁 **Project Structure**
+
+```
+frontend/
+│
+├── src/
+│   ├── pages/
+│   ├── components/
+│   ├── services/api.js
+│   └── App.js
+│
+├── public/
+└── package.json
+```
+
+---
+
+## ⚙️ **Setup**
+
+### Install dependencies
+
+```
+npm install
+```
+
+### Run locally
+
+```
+npm start
+```
+
+---
+
+## 🌐 **Environment Variables**
+
+Create `.env` in `/frontend`:
+
+```
+REACT_APP_API_BASE=https://your-backend-domain/api
+```
+
+---
+
+## 🔧 **Deployment (Vercel)**
+
+1. Push code to GitHub
+2. Create a new Vercel project
+3. Select the `/frontend` folder
+4. Framework preset: **Create React App**
+5. Add environment variable:
+
+   ```
+   REACT_APP_API_BASE=...
+   ```
+
+6. Add `vercel.json` for routing fix:
+
+```json
+{
+  "rewrites": [{ "source": "/(.*)", "destination": "/" }]
+}
+```
+
+7. Deploy 🚀
+
+---
+
+## 📌 Notes
+
+- API requests automatically include the token using an Axios interceptor.
