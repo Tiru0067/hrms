@@ -64,13 +64,7 @@ npm start
 2. Create a new Vercel project
 3. Select the `/frontend` folder
 4. Framework preset: **Create React App**
-5. Add environment variable:
-
-   ```
-   REACT_APP_API_BASE=...
-   ```
-
-6. Add `vercel.json` for routing fix:
+5. Add `vercel.json` for routing fix:
 
 ```json
 {
