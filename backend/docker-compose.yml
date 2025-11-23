@@ -1,0 +1,25 @@
+services:
+  postgres:
+    image: postgres:18
+    container_name: hrms-postgres
+    environment:
+      POSTGRES_USER: hrms_user
+      POSTGRES_PASSWORD: hrms_pass_123
+      POSTGRES_DB: hrms_db
+    ports:
+      - "5433:5432"
+    volumes:
+      - ./hrms_data:/var/lib/postgresql
+    restart: unless-stopped
+
+  adminer:
+    image: adminer:latest
+    container_name: hrms-adminer
+    ports:
+      - "8081:8080"
+    depends_on:
+      - postgres
+    restart: unless-stopped
+
+volumes:
+  hrms_data:
